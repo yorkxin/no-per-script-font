@@ -22,7 +22,8 @@ var FontSettings = new (function() {
     // FIXME: API changed in current trunk. Use getFont instead of getFontName when broken.
     chrome.experimental.fontSettings.getFontName(details, function(responseDetails) {
       if (callback !== undefined) {
-        callback(responseDetails.fontName);
+        details["fontName"] = responseDetails.fontName;
+        callback(details);
       }
     });
   };
@@ -40,30 +41,8 @@ var FontSettings = new (function() {
     // FIXME: API changed in current trunk. Use setFont instead of setFontName when broken.
     chrome.experimental.fontSettings.setFontName(details, function() {
       if (callback !== undefined) {
-        callback();
+        callback(details);
       }
-    });
-  };
-
-  this.getGlobalFontName = function(family, callback) {
-    this.getFontName(family, null, callback);
-  };
-
-  this.getFontNamesForScriptAndGlobal = function(family, script, callback) {
-    this.getGlobalFontName(family, function(globalFontName) {
-      // XXX: should use function binding, but don't know how to use it yet.
-      FontSettings.getFontName(family, script, function(scriptFontName) {
-        var scriptDetails = {
-          name: script,
-          fontName: scriptFontName
-        };
-
-        var globalDetails = {
-          fontName: globalFontName
-        };
-
-        callback(family, scriptDetails, globalDetails);
-      });
     });
   };
 })();
@@ -79,9 +58,10 @@ for (_i=0; _i < scripts.length; _i++) {
   for (_j=0; _j < families.length; _j++) {
     var family = families[_j];
 
-    FontSettings.getFontNamesForScriptAndGlobal(family, script, function(family, scriptDetails, globalDetails) {
-      if (globalDetails.fontName !== scriptDetails.fontName) {
-        FontSettings.setFontName(family, scriptDetails.name, globalDetails.fontName);
+    FontSettings.getFontName(family, script, function(details) {
+      // set fontName to "" is to tell Chrome to use system-wide fallback
+      if (details.fontName !== "") {
+        FontSettings.setFontName(details.genericFamily, details.script, "");
       }
     });
   };
