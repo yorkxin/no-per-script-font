@@ -1,0 +1,9 @@
+{
+  "name": "No Per-Script Font!",
+  "description": "Temporarily fix Chinese font issue in Chrome 18+",
+  "version": "0.1",
+  "permissions": ["experimental"],
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
