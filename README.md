@@ -15,7 +15,7 @@
 1. 在 Downloads 頁面下載 `no-per-script-font.crx` 。
 2. Chrome 應該會提示你要不要安裝這個 Exntesion。
   * 沒有的話，把那檔案找出來，並按兩下來安裝。
-3. 安裝完成後，這個 Extension 會強制把繁體中文 (`Hant`) 和簡體中文 (`Hans`) 的字體名稱設定為你在「偏好設定」頁面裡所設定的字體（全域字體）。
+3. 安裝完成後，這個 Extension 會強制把繁體中文 (`Hant`) 和簡體中文 (`Hans`) 的所有 Generic Font Family 的字體名稱設定為空白，這樣子會關閉依書寫文字設定字體的功能。
 
 要解除安裝或是關掉修改效果的話，只要去 Extensions 頁面按一下「解除安裝」或「停用」就行了，由這個 Extension 所做的修改都會還原。
 
