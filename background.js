@@ -21,10 +21,8 @@ var FontSettings = new (function() {
 
     // FIXME: API changed in current trunk. Use getFont instead of getFontName when broken.
     chrome.experimental.fontSettings.getFontName(details, function(responseDetails) {
-      if (callback !== undefined) {
-        details["fontName"] = responseDetails.fontName;
-        callback(details);
-      }
+      details["fontName"] = responseDetails.fontName;
+      callback(details);
     });
   };
 
