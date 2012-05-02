@@ -7,7 +7,6 @@
 ## 需求
 
 * 你要有 Chrome Beta 版，因為這個 extension 要使用 `chrome.experimental.fontSettings` 這個還在實驗中的 API ，目前只有 Beta 版才有。
-  * 更精確地說，這個 Extension **只能在 Chrome 19 Beta 使用**，因為新版的 Chrome Canary (Dev channel) 已經改 API 了，也就是說，這個 Extension 不能在 Canary 運作。
 * 你要在 `chrome://flags` 打開「實驗性擴充功能 API」。
 
 ## 使用方式

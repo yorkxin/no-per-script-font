@@ -19,8 +19,7 @@ var FontSettings = new (function() {
       details["script"] = script;
     }
 
-    // FIXME: API changed in current trunk. Use getFont instead of getFontName when broken.
-    chrome.experimental.fontSettings.getFontName(details, function(responseDetails) {
+    chrome.experimental.fontSettings.getFont(details, function(responseDetails) {
       details["fontName"] = responseDetails.fontName;
       callback(details);
     });
@@ -36,8 +35,7 @@ var FontSettings = new (function() {
       details["script"] = script;
     }
 
-    // FIXME: API changed in current trunk. Use setFont instead of setFontName when broken.
-    chrome.experimental.fontSettings.setFontName(details, function() {
+    chrome.experimental.fontSettings.setFont(details, function() {
       if (callback !== undefined) {
         callback(details);
       }
