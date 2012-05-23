@@ -6,7 +6,7 @@
 
 ## 需求
 
-* 你要有 Chrome Beta 版，因為這個 extension 要使用 `chrome.experimental.fontSettings` 這個還在實驗中的 API ，目前只有 Beta 版才有。
+* 你要升級到 Chrome 20，因為這個 extension 要使用 `chrome.experimental.fontSettings` 這個還在實驗中的 API。
 * 你要在 `chrome://flags` 打開「實驗性擴充功能 API」。
 
 ## 使用方式

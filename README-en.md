@@ -6,7 +6,7 @@ But for some people, like me, would prefer to have the OS determine font fallbac
 
 ## Requirements
 
-* You need Chrome Canary (Dev channel), because this extension depends on `chrome.experimental.fontSettings` experimental API, which is currently only available on Chrome Canary.
+* You need Chrome 20, because this extension depends on `chrome.experimental.fontSettings` experimental API.
 * You have to turn on "Experimental Extension APIs" in `chrome://flags`.
 
 ## Usage
