@@ -10,7 +10,7 @@ var FontSettings = new (function() {
     return ["Hant", "Hans"];
   };
 
-  this.getFontName = function(family, script, callback) {
+  this.getFont = function(family, script, callback) {
     var details = {
       "genericFamily": family
     };
@@ -25,7 +25,7 @@ var FontSettings = new (function() {
     });
   };
 
-  this.setFontName = function(family, script, fontName, callback) {
+  this.setFont = function(family, script, fontName, callback) {
     var details = {
       "genericFamily": family,
       "fontId": fontName
@@ -54,10 +54,10 @@ for (_i=0; _i < scripts.length; _i++) {
   for (_j=0; _j < families.length; _j++) {
     var family = families[_j];
 
-    FontSettings.getFontName(family, script, function(details) {
+    FontSettings.getFont(family, script, function(details) {
       // set fontId to "" is to tell Chrome to use system-wide fallback
       if (details.fontId !== "") {
-        FontSettings.setFontName(details.genericFamily, details.script, "");
+        FontSettings.setFont(details.genericFamily, details.script, "");
       }
     });
   };
