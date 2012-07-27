@@ -20,7 +20,7 @@ var FontSettings = new (function() {
     }
 
     chrome.fontSettings.getFont(details, function(responseDetails) {
-      details["fontName"] = responseDetails.fontName;
+      details["fontId"] = responseDetails.fontId;
       callback(details);
     });
   };
@@ -28,7 +28,7 @@ var FontSettings = new (function() {
   this.setFontName = function(family, script, fontName, callback) {
     var details = {
       "genericFamily": family,
-      "fontName": fontName
+      "fontId": fontName
     };
 
     if (script !== null) {
@@ -55,8 +55,8 @@ for (_i=0; _i < scripts.length; _i++) {
     var family = families[_j];
 
     FontSettings.getFontName(family, script, function(details) {
-      // set fontName to "" is to tell Chrome to use system-wide fallback
-      if (details.fontName !== "") {
+      // set fontId to "" is to tell Chrome to use system-wide fallback
+      if (details.fontId !== "") {
         FontSettings.setFontName(details.genericFamily, details.script, "");
       }
     });
