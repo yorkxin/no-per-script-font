@@ -48,8 +48,6 @@ var FontSettings = new FontSettingsClass();
 var scripts = FontSettings.getScriptsToApply();
 var families = FontSettings.getFontFamiliesToApply();
 
-var _i, _j; // index registers
-
 var callback = function(details) {
   // set fontId to "" is to tell Chrome to use system-wide fallback
   if (details.fontId !== "") {
@@ -57,12 +55,8 @@ var callback = function(details) {
   }
 };
 
-for (_i=0; _i < scripts.length; _i++) {
-  var script = scripts[_i];
-
-  for (_j=0; _j < families.length; _j++) {
-    var family = families[_j];
-
+scripts.forEach(function(script) {
+  families.forEach(function(family) {
     FontSettings.getFont(family, script, callback);
-  }
-}
+  });
+});
