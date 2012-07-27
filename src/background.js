@@ -49,16 +49,14 @@
   var scripts = FontSettings.getScriptsToApply();
   var families = FontSettings.getFontFamiliesToApply();
 
-  var callback = function(details) {
-    // set fontId to "" is to tell Chrome to use system-wide fallback
-    if (details.fontId !== "") {
-      FontSettings.setFont(details.genericFamily, details.script, "");
-    }
-  };
-
   scripts.forEach(function(script) {
     families.forEach(function(family) {
-      FontSettings.getFont(family, script, callback);
+      FontSettings.getFont(family, script, function(details) {
+        // set fontId to "" is to tell Chrome to use system-wide fallback
+        if (details.fontId !== "") {
+          FontSettings.setFont(details.genericFamily, details.script, "");
+        }
+      });
     });
   });
 })(chrome);
