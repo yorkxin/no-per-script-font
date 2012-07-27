@@ -1,7 +1,7 @@
 {
   "name": "No Per-Script Font!",
   "description": "Turn Off Per-Script Font to Make Chinese Look Better",
-  "version": "0.3",
+  "version": "0.3.9.0",
   "manifest_version": 2,
   "homepage_url": "https://github.com/chitsaou/no-per-script-font",
   "minimum_chrome_version": "22.0",
