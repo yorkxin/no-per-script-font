@@ -19,7 +19,7 @@ var FontSettings = new (function() {
       details["script"] = script;
     }
 
-    chrome.experimental.fontSettings.getFont(details, function(responseDetails) {
+    chrome.fontSettings.getFont(details, function(responseDetails) {
       details["fontName"] = responseDetails.fontName;
       callback(details);
     });
@@ -35,7 +35,7 @@ var FontSettings = new (function() {
       details["script"] = script;
     }
 
-    chrome.experimental.fontSettings.setFont(details, function() {
+    chrome.fontSettings.setFont(details, function() {
       if (callback !== undefined) {
         callback(details);
       }
