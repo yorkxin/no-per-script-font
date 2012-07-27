@@ -1,6 +1,6 @@
 {
   "name": "No Per-Script Font!",
-  "description": "Temporarily fix Chinese font issue in Chrome 18+",
+  "description": "Turn Off Per-Script Font to Make Chinese Look Better",
   "version": "0.3",
   "manifest_version": 2,
   "homepage_url": "https://github.com/chitsaou/no-per-script-font",
