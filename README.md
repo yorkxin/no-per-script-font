@@ -6,9 +6,7 @@
 
 ## 需求
 
-* 你要升級到 Chrome 19，因為這個 extension 要使用 `chrome.experimental.fontSettings` 這個還在實驗中的 API，目前只有 19+ 才有。
-  * 更精確地說，這個 Extension **只能在 Chrome 19 使用**，因為新版的 Chrome 20 已經改 API 了，也就是說，這個 Extension 不能直接在 20 及以後的版本運作。（有需要請參考 `cr20` 這條 branch 。）
-* 你要在 `chrome://flags` 打開「實驗性擴充功能 API」。
+* 你要在 `chrome://flags` 打開「實驗性擴充功能 API」，因為這個 extension 要使用 [`chrome.experimental.fontSettings`](http://code.google.com/chrome/extensions/experimental.fontSettings.html) 這個還在實驗中的 API。
 
 ## 使用方式
 
