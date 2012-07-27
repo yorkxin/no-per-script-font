@@ -1,19 +1,19 @@
 (function(chrome) {
   "use strict";
 
-  var FontSettingsClass = function() {
+  var FontSettings = {
 
     // TODO: make it an option in options.html
-    this.getFontFamiliesToApply = function() {
+    getFontFamiliesToApply: function() {
       return ["standard", "serif", "sansserif", "fixed"];
-    };
+    },
 
     // TODO: make it an option in options.html
-    this.getScriptsToApply = function() {
+    getScriptsToApply: function() {
       return ["Hant", "Hans"];
-    };
+    },
 
-    this.getFont = function(family, script, callback) {
+    getFont: function(family, script, callback) {
       var details = {
         "genericFamily": family
       };
@@ -26,9 +26,9 @@
         details["fontId"] = responseDetails.fontId;
         callback(details);
       });
-    };
+    },
 
-    this.setFont = function(family, script, fontName, callback) {
+    setFont: function(family, script, fontName, callback) {
       var details = {
         "genericFamily": family,
         "fontId": fontName
@@ -43,10 +43,8 @@
           callback(details);
         }
       });
-    };
+    }
   };
-
-  var FontSettings = new FontSettingsClass();
 
   var scripts = FontSettings.getScriptsToApply();
   var families = FontSettings.getFontFamiliesToApply();
