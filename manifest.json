@@ -1,7 +1,7 @@
 {
   "name": "No Per-Script Font!",
   "description": "Temporarily fix Chinese font issue in Chrome 18+",
-  "version": "0.2.9.0",
+  "version": "0.3",
   "manifest_version": 2,
   "homepage_url": "https://github.com/chitsaou/no-per-script-font",
   "minimum_chrome_version": "20.0",
