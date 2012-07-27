@@ -46,10 +46,11 @@
     }
   };
 
-  var scripts = FontSettings.getScriptsToApply();
+  // Save families into a variable to avoid too many
+  // invocations of getFontFamiliesToApply() function.
   var families = FontSettings.getFontFamiliesToApply();
 
-  scripts.forEach(function(script) {
+  FontSettings.getScriptsToApply().forEach(function(script) {
     families.forEach(function(family) {
       FontSettings.getFont(family, script, function(details) {
         // set fontId to "" is to tell Chrome to use system-wide fallback
