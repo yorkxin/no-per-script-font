@@ -11,9 +11,9 @@ But for some people, like me, would prefer to have the OS determine font fallbac
 ## Usage
 
 1. Download `no-per-script-font.crx` from the downloads page.
-2. Chrome should prompt you to install the extension.
-  * If not, find it in your file browser, and double-click on it.
-3. This extension will force the font names of all the generic font families in Traditional Chinese (`Hant`) and Simplified Chinese (`Hans`) to use a blank font name (`""`), which will turn off per-script font setting.
+- Open "Extensions" page in Chrome: click **Window > Extensions** menu, or enter URL `chrome://chrome/extensions/` in the address bar.
+- Locate `no-per-script-font.crx` in your file manager, and drag-n-drop this file into the "Extensions" page that you opened in the last step.
+- This extension will force the font names of all the generic font families in Traditional Chinese (`Hant`) and Simplified Chinese (`Hans`) to use a blank font name (`""`), which will turn off per-script font setting.
 
 To uninstall or turn off the effect, simply click "Uninstall" or "Disable" in the Extensions page, and everything altered by this extension will be restored.
 
