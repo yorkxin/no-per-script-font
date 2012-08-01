@@ -6,6 +6,12 @@
   "manifest_version": 2,
   "homepage_url": "https://github.com/chitsaou/no-per-script-font",
   "minimum_chrome_version": "22.0",
+  "icons": {
+    "128": "icons/icon-128.png",
+    "96": "icons/icon-96.png",
+    "48": "icons/icon-48.png",
+    "16": "icons/icon-16.png"
+  },
   "permissions": ["fontSettings"],
   "background": {
     "scripts": ["background.js"]
