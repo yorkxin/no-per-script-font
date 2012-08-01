@@ -6,7 +6,9 @@
 
 ## 需求
 
-* 你要在 `chrome://flags` 打開「實驗性擴充功能 API」，因為這個 extension 要使用 [`chrome.experimental.fontSettings`](http://code.google.com/chrome/extensions/experimental.fontSettings.html) 這個還在實驗中的 API。
+* Chrome 19+
+* Chrome 19 、 20 、 21 還要在 `chrome://flags` 打開「實驗性擴充功能 API」，因為這個 extension 要使用 [`chrome.experimental.fontSettings`](http://code.google.com/chrome/extensions/experimental.fontSettings.html) 這個還在實驗中的 API。
+  * Chrome 22+ 不需要打開這個選項
 
 ## 使用方式
 
