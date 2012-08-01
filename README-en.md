@@ -6,7 +6,7 @@ But for some people, like me, would prefer to have the OS determine font fallbac
 
 ## Requirements
 
-* Chrome 22+
+* You have to turn on "Experimental Extension APIs" in `chrome://flags`, because this extension depends on [`chrome.experimental.fontSettings`](http://code.google.com/chrome/extensions/experimental.fontSettings.html) experimental API.
 
 ## Usage
 
