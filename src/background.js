@@ -1,64 +1,63 @@
-var FontSettings = new (function() {
+(function(chrome) {
+  "use strict";
 
-  // TODO: make it an option in options.html
-  this.getFontFamiliesToApply = function() {
-    return ["standard", "serif", "sansserif", "fixed"];
-  };
+  var FontSettings = {
 
-  // TODO: make it an option in options.html
-  this.getScriptsToApply = function() {
-    return ["Hant", "Hans"];
-  };
+    // TODO: make it an option in options.html
+    getFontFamiliesToApply: function() {
+      return ["standard", "serif", "sansserif", "fixed"];
+    },
 
-  this.getFontName = function(family, script, callback) {
-    var details = {
-      "genericFamily": family
-    };
+    // TODO: make it an option in options.html
+    getScriptsToApply: function() {
+      return ["Hant", "Hans"];
+    },
 
-    if (script !== null) {
-      details["script"] = script;
-    }
+    getFont: function(family, script, callback) {
+      var details = {
+        "genericFamily": family
+      };
 
-    chrome.experimental.fontSettings.getFont(details, function(responseDetails) {
-      details["fontName"] = responseDetails.fontName;
-      callback(details);
-    });
-  };
+      if (script !== null) {
+        details["script"] = script;
+      }
 
-  this.setFontName = function(family, script, fontName, callback) {
-    var details = {
-      "genericFamily": family,
-      "fontName": fontName
-    };
-
-    if (script !== null) {
-      details["script"] = script;
-    }
-
-    chrome.experimental.fontSettings.setFont(details, function() {
-      if (callback !== undefined) {
+      chrome.fontSettings.getFont(details, function(responseDetails) {
+        details["fontId"] = responseDetails.fontId;
         callback(details);
+      });
+    },
+
+    setFont: function(family, script, fontName, callback) {
+      var details = {
+        "genericFamily": family,
+        "fontId": fontName
+      };
+
+      if (script !== null) {
+        details["script"] = script;
       }
-    });
+
+      chrome.fontSettings.setFont(details, function() {
+        if (callback !== undefined) {
+          callback(details);
+        }
+      });
+    }
   };
-})();
 
-var scripts = FontSettings.getScriptsToApply();
-var families = FontSettings.getFontFamiliesToApply();
+  // Save families into a variable to avoid too many
+  // invocations of getFontFamiliesToApply() function.
+  var families = FontSettings.getFontFamiliesToApply();
 
-var _i, _j; // index registers
-
-for (_i=0; _i < scripts.length; _i++) {
-  var script = scripts[_i];
-
-  for (_j=0; _j < families.length; _j++) {
-    var family = families[_j];
-
-    FontSettings.getFontName(family, script, function(details) {
-      // set fontName to "" is to tell Chrome to use system-wide fallback
-      if (details.fontName !== "") {
-        FontSettings.setFontName(details.genericFamily, details.script, "");
-      }
+  FontSettings.getScriptsToApply().forEach(function(script) {
+    families.forEach(function(family) {
+      FontSettings.getFont(family, script, function(details) {
+        // set fontId to "" is to tell Chrome to use system-wide fallback
+        if (details.fontId !== "") {
+          FontSettings.setFont(details.genericFamily, details.script, "");
+        }
+      });
     });
-  };
-};
+  });
+})(chrome);
