@@ -1,16 +1,24 @@
 # No Per-Script Font!
 
-As of Chrome 18, Chinese font are determined by language -- specifically, according to the `lang` attribute of the element. For example, `zh-cn`, `zh-tw` will use different fonts because they're different script.
+As of Chrome 18 and Safari 6, Chinese font are determined by language -- specifically, according to the `lang` attribute of the element. For example, `zh-cn`, `zh-tw` will use different fonts because they're different script.
 
 But for some people, like me, would prefer to have the OS determine font fallback, to avoid wrong font or broken font on sites like Facebook (`lang="zh"` means Simplified Chinese) or Wikipedia Chinese (`lang` tag changes dynamically). This extension helps you deal with this issue.
 
 ## Requirements
 
+### Google Chrome
+
 * Chrome 19+
 * For Chrome 19, 20 and 21, you have to turn on "Experimental Extension APIs" in `chrome://flags`, because this extension depends on [`chrome.experimental.fontSettings`](http://code.google.com/chrome/extensions/experimental.fontSettings.html) experimental API.
   * For Chrome 22+, there is no need to turn this option on.
 
+### Apple Safari
+
+* Safari 6.0+
+
 ## Usage
+
+### Google Chrome
 
 1. Download `no-per-script-font.crx` from the downloads page.
 - Open "Extensions" page in Chrome: click **Window > Extensions** menu, or enter URL `chrome://chrome/extensions/` in the address bar.
@@ -18,6 +26,14 @@ But for some people, like me, would prefer to have the OS determine font fallbac
 - This extension will force the font names of all the generic font families in Traditional Chinese (`Hant`) and Simplified Chinese (`Hans`) to use a blank font name (`""`), which will turn off per-script font setting.
 
 To uninstall or turn off the effect, simply click "Uninstall" or "Disable" in the Extensions page, and everything altered by this extension will be restored.
+
+### Apple Safari
+
+- Download `no-per-script-font.safariextz` from the downloads page. Safari will prompt you to install the extension.
+
+This extension will assign `Helvetica` and `Times` to general font families `sans-serif` and `serif` respectively, makes OS X determine which font to fallback. See [Safari 6 Default Font Fallback Fix](https://gist.github.com/2925009) (in Chinese) for more details.
+
+Such implementation is tricky, and will be refactored into the same way that the Chrome version does, when Safari provides native Extension API on some day.
 
 ## License (The MIT License)
 
