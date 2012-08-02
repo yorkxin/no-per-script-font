@@ -1,8 +1,13 @@
 # No Per-Script Font!
 
-As of Chrome 18 and Safari 6, Chinese font are determined by language -- specifically, according to the `lang` attribute of the element. For example, `zh-cn`, `zh-tw` will use different fonts because they're different script.
+As of Chrome 18 and Safari 6, fonts are determined by writing scripts -- specifically, according to the `lang` attributes of elements. For example, `zh-cn` and `zh-tw` will be rendered with different fonts because they're different scripts.
 
-But for some people, like me, would prefer to have the OS determine font fallback, to avoid wrong font or broken font on sites like Facebook (`lang="zh"` means Simplified Chinese) or Wikipedia Chinese (`lang` tag changes dynamically). This extension helps you deal with this issue.
+In addition, the selected font will be applied on Latin characters, and usually, Latin characters in Chinese fonts are really ugly.
+
+The Chrome Extension turns off per-script font in Traditional Chinese and Simplified Chinese, and have your operating system determine which font to use.
+
+The Safari Extension turns off per-script font in ALL languages, and have OS X determine which font to use.
+
 
 ## Requirements
 
