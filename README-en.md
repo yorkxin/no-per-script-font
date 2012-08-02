@@ -8,6 +8,15 @@ The Chrome Extension turns off per-script font in Traditional Chinese and Simpli
 
 The Safari Extension turns off per-script font in ALL languages, and have OS X determine which font to use.
 
+## Screenshots
+
+Mac OS X:
+
+[![](http://cl.ly/image/0w1S1i2x2W3x/no-per-script-font-osx-en.png)](http://cl.ly/image/0w1S1i2x2W3x)
+
+Windows:
+
+[![](http://cl.ly/image/0d0c1w3v342O/no-per-script-font-win-en.png)](http://cl.ly/image/0d0c1w3v342O)
 
 ## Requirements
 

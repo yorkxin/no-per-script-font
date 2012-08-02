@@ -8,6 +8,16 @@ Chrome 的擴充程式會讓 Chrome 在繁體中文、簡體中文裡，把依�
 
 Safari 的擴充程式會讓 Safari 在所有文字裡，把依書寫文字決定字體的功能關閉，使得字體由 OS X 來決定。
 
+## 螢幕截圖
+
+Mac OS X:
+
+[![](http://cl.ly/image/253j0E0S2B30/no-per-script-font-osx-zh.png)](http://cl.ly/image/253j0E0S2B30)
+
+Windows:
+
+[![](http://cl.ly/image/2N2z2m3q3q2P/no-per-script-font-win-zh.png)](http://cl.ly/image/2N2z2m3q3q2P)
+
 ## 需求
 
 ### Google Chrome
