@@ -4,7 +4,6 @@
   "default_locale": "en",
   "version": "0.3.9.2",
   "manifest_version": 2,
-  "homepage_url": "https://github.com/chitsaou/no-per-script-font",
   "minimum_chrome_version": "22.0",
   "icons": {
     "128": "icons/icon-128.png",
