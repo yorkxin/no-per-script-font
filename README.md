@@ -18,11 +18,17 @@
 
 ## 使用方式
 
-### Google Chrome
+### Google Chrome 22+
 
-1. 在 Downloads 頁面下載 `no-per-script-font.crx` 。
+請直接去 Chrome Web Store 安裝 [不要給我亂改字體！](https://chrome.google.com/webstore/detail/lndmkajeoopejggihiomoaepinlhblmm)
+
+要解除安裝或是關掉修改效果的話，只要去 Extensions 頁面按一下「解除安裝」或「停用」就行了，由這個 Extension 所做的修改都會還原。
+
+### Google Chrome 21 以下
+
+1. 在 Downloads 頁面下載 `no-per-script-font-xxx.crx` 。
 - 打開 Chrome 的「擴充程式」管理介面：按一下功能表的「視窗」→「擴充程式」，或是輸入網址 `chrome://chrome/extensions/`。
-- 找到 `no-per-script-font.crx` 檔案，並把檔案拖曳進上一步驟打開的「擴充程式」管理介面，這樣子才能安裝。
+- 找到 `no-per-script-font-xxx.crx` 檔案，並把檔案拖曳進上一步驟打開的「擴充程式」管理介面，這樣子才能安裝。
 - 安裝完成後，這個 Extension 會強制把繁體中文 (`Hant`) 和簡體中文 (`Hans`) 的所有 Generic Font Family 的字體名稱設定為空白，這樣子會關閉依書寫文字設定字體的功能。
 - 已經打開的分頁不會更新，新打開的分頁會套用新的字體設定。
 
@@ -30,7 +36,7 @@
 
 ### Apple Safari
 
-- 在 Downloads 頁面下載 `no-per-script-font.safariextz` ，會提示安裝。
+- 在 Downloads 頁面下載 `no-per-script-font-safari-xxx.safariextz` ，會提示安裝。
 
 這個 Extension 會把 `sans-serif` 字體設為 `Helvetica` 、 把 `serif` 設為 `Times` ，藉此把字體的決定權交還給 OS X 。參考：[Safari 6 字體修正方式](https://gist.github.com/2925009)。
 

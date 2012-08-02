@@ -18,18 +18,24 @@ But for some people, like me, would prefer to have the OS determine font fallbac
 
 ## Usage
 
-### Google Chrome
+### Google Chrome 22
 
-1. Download `no-per-script-font.crx` from the downloads page.
+Install [No Per-Script Font!](https://chrome.google.com/webstore/detail/lndmkajeoopejggihiomoaepinlhblmm) on Chrome Web Store directly.
+
+To uninstall or turn off the effect, simply click "Uninstall" or "Disable" in the Extensions page, and everything altered by this extension will be restored.
+
+### Google Chrome 21 or below
+
+1. Download `no-per-script-font-xxx.crx` from the downloads page.
 - Open "Extensions" page in Chrome: click **Window > Extensions** menu, or enter URL `chrome://chrome/extensions/` in the address bar.
-- Locate `no-per-script-font.crx` in your file manager, and drag-n-drop this file into the "Extensions" page that you opened in the last step.
+- Locate `no-per-script-font-xxx.crx` in your file manager, and drag-n-drop this file into the "Extensions" page that you opened in the last step.
 - This extension will force the font names of all the generic font families in Traditional Chinese (`Hant`) and Simplified Chinese (`Hans`) to use a blank font name (`""`), which will turn off per-script font setting.
 
 To uninstall or turn off the effect, simply click "Uninstall" or "Disable" in the Extensions page, and everything altered by this extension will be restored.
 
 ### Apple Safari
 
-- Download `no-per-script-font.safariextz` from the downloads page. Safari will prompt you to install the extension.
+- Download `no-per-script-font-safari-xxx.safariextz` from the downloads page. Safari will prompt you to install the extension.
 
 This extension will assign `Helvetica` and `Times` to general font families `sans-serif` and `serif` respectively, makes OS X determine which font to fallback. See [Safari 6 Default Font Fallback Fix](https://gist.github.com/2925009) (in Chinese) for more details.
 
