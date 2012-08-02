@@ -41,6 +41,8 @@
 			<string>All</string>
 		</dict>
 	</dict>
+	<key>Update Manifest URL</key>
+	<string>https://raw.github.com/chitsaou/no-per-script-font/safari-auto-update/safari-update.plist</string>
 	<key>Website</key>
 	<string>https://github.com/chitsaou/no-per-script-font</string>
 </dict>
