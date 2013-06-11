@@ -49,7 +49,8 @@ To uninstall or turn off the effect, simply click "Uninstall" or "Disable" in th
 
 ### Apple Safari
 
-- Download `no-per-script-font-safari-xxx.safariextz` from the downloads page. Safari will prompt you to install the extension.
+
+- Download [no-per-script-font-safari-v1.1.safariextz](http://d.pr/f/GYWd) manually (SHA1SUM: `a0a1228f68faf26dce7843905afaae302abe05b6`). Double-click to open it, and Safari will prompt you to install the extension.
 
 This extension will assign `Helvetica` and `Times` to general font families `sans-serif` and `serif` respectively, makes OS X determine which font to fallback. See [Safari 6 Default Font Fallback Fix](https://gist.github.com/2925009) (in Chinese) for more details.
 
