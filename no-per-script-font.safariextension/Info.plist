@@ -5,7 +5,7 @@
 	<key>Author</key>
 	<string>Yu-Cheng Chuang</string>
 	<key>Builder Version</key>
-	<string>7536.25</string>
+	<string>10600.1.25</string>
 	<key>CFBundleDisplayName</key>
 	<string>No Per-Script Font!</string>
 	<key>CFBundleIdentifier</key>
@@ -29,6 +29,8 @@
 	</dict>
 	<key>Description</key>
 	<string>Making Multilingual Pages Look Better by Turning Off Per-Script Font Fallbacks</string>
+	<key>DeveloperIdentifier</key>
+	<string>CVAXVH2B5B</string>
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>Permissions</key>
