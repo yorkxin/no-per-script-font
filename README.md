@@ -50,7 +50,7 @@ Windows:
 
 ### Apple Safari
 
-- 手動下載 [no-per-script-font-safari-v1.1.safariextz](http://d.pr/f/GYWd) (SHA1SUM: `a0a1228f68faf26dce7843905afaae302abe05b6`) ，按兩下打開，會提示安裝。
+- 手動下載 [no-per-script-font.safariextz](https://github.com/chitsaou/no-per-script-font/releases/tag/safari-1.1) ，按兩下打開，會提示安裝。
 
 這個 Extension 會把 `sans-serif` 字體設為 `Helvetica` 、 把 `serif` 設為 `Times` ，藉此把字體的決定權交還給 OS X 。參考：[Safari 6 字體修正方式](https://gist.github.com/2925009)。
 
